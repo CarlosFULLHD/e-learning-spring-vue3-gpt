@@ -1,4 +1,4 @@
-# E-Learning App: Inspirado en Udemy
+# E-Learning App:
 
 Una plataforma de aprendizaje en línea construida con Spring Boot, Vue.js 3, y TailwindCSS, con integración de la API del chat GPT para asistencia inteligente en el aprendizaje.
 
