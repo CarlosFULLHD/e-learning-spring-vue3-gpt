@@ -6,29 +6,27 @@ Obtener ingresos por anuncios y compra de "cursos premium"(Esto esta fuera del M
 
 ## Historias de usuario
 
-10. Inicio de sesion(log out)
-11. Nav bar con inicio, cursos y recursos
-12. Dar respuesta con CHAT GPT sobre la importancia de habilidades blandas
-13. Listar cursos
-14. Mostrar bienvenida de curso y roadmap
-15. Mostrar modulos y lecciones del curso
-16. Mostrar de la leccion el video y descripcion
-17. Dar respuesta a las preguntas del usuario con chat GPT
-18. Realizar prueba generada por el CHAT GPT segun la leccion
-    100.Mostrar recursos base para la creacion de los cursos: libros, articulos, canal de yt
-    110.Crear nuevo curso
-    111.Subir imagen del curso
-    120.Modificar curso actual
-    121.Eliminar curso
-    130.Modificar modulo
-    140.Eliminar modulo
-    150.Crear nuevo modulo
-    160.Modificar leccion
-    170.Eliminar leccion
-    180.Crear leccion
-    181.Añadir chat gpt con descripcion necesaria para responder y cerar cuestionario(BDD)
-19.
-20.
+1. Inicio de sesion(log out)
+2. Nav bar con inicio, cursos y recursos
+3. Dar respuesta con CHAT GPT sobre la importancia de habilidades blandas
+4. Listar cursos
+5. Mostrar bienvenida de curso y roadmap
+6. Mostrar modulos y lecciones del curso
+7. Mostrar de la leccion el video y descripcion
+8. Dar respuesta a las preguntas del usuario con chat GPT
+9. Realizar prueba generada por el CHAT GPT segun la leccion
+   10.Mostrar recursos base para la creacion de los cursos: libros, articulos, canal de yt
+   11.Crear nuevo curso
+   12.Subir imagen del curso
+   13.Modificar curso actual
+   14.Eliminar curso
+   15.Modificar modulo
+   16.Eliminar modulo
+   17.Crear nuevo modulo
+   18.Modificar leccion  
+   19.Eliminar leccion
+   20.Crear leccion
+   21.Añadir chat gpt con descripcion necesaria para responder y cerar cuestionario(BDD)
 
 ## Whish List
 
