@@ -2,18 +2,33 @@
 
 ## Valor
 
-Obtener ingresos por comisión a partir de las trasacciones de compra/venta de cartas.
+Obtener ingresos por anuncios y compra de "cursos premium"(Esto esta fuera del MVP)
 
 ## Historias de usuario
 
-10. Ingreso.
-11. Registro de los clientes.
-12. Listar todas las tarjetas a la venta de forma pública.
-13. Publicación de items para la venta, con datos para la subasta y venta directa.
-14. Busqueda de items para la compra.
-15. Complertar registro con datos de tarjeta para la compra.
-16. Gestión de la subasta con deadline online real time
-17. Soporte para reclamos.
+10. Inicio de sesion(log out)
+11. Nav bar con inicio, cursos y recursos
+12. Dar respuesta con CHAT GPT sobre la importancia de habilidades blandas
+13. Listar cursos
+14. Mostrar bienvenida de curso y roadmap
+15. Mostrar modulos y lecciones del curso
+16. Mostrar de la leccion el video y descripcion
+17. Dar respuesta a las preguntas del usuario con chat GPT
+18. Realizar prueba generada por el CHAT GPT segun la leccion
+    100.Mostrar recursos base para la creacion de los cursos: libros, articulos, canal de yt
+    110.Crear nuevo curso
+    111.Subir imagen del curso
+    120.Modificar curso actual
+    121.Eliminar curso
+    130.Modificar modulo
+    140.Eliminar modulo
+    150.Crear nuevo modulo
+    160.Modificar leccion
+    170.Eliminar leccion
+    180.Crear leccion
+    181.Añadir chat gpt con descripcion necesaria para responder y cerar cuestionario(BDD)
+19.
+20.
 
 ## Whish List
 
