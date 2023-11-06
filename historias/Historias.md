@@ -15,18 +15,18 @@ Obtener ingresos por anuncios y compra de "cursos premium"(Esto esta fuera del M
 7. Mostrar de la leccion el video y descripcion
 8. Dar respuesta a las preguntas del usuario con chat GPT
 9. Realizar prueba generada por el CHAT GPT segun la leccion
-   10.Mostrar recursos base para la creacion de los cursos: libros, articulos, canal de yt
-   11.Crear nuevo curso
-   12.Subir imagen del curso
-   13.Modificar curso actual
-   14.Eliminar curso
-   15.Modificar modulo
-   16.Eliminar modulo
-   17.Crear nuevo modulo
-   18.Modificar leccion  
-   19.Eliminar leccion
-   20.Crear leccion
-   21.Añadir chat gpt con descripcion necesaria para responder y cerar cuestionario(BDD)
+10. Mostrar recursos base para la creacion de los cursos: libros, articulos, canal de yt
+11. Crear nuevo curso
+12. Subir imagen del curso
+13. Modificar curso actual
+14. Eliminar curso
+15. Modificar modulo
+16. Eliminar modulo
+17. Crear nuevo modulo
+18. Modificar leccion
+19. Eliminar leccion
+20. Crear leccion
+21. Añadir chat gpt con descripcion necesaria para responder y crear prueba(BDD)
 
 ## Whish List
 
