@@ -2,8 +2,7 @@
 
 ## Valor
 
-Obtener ingresos por anuncios y compra de "cursos premium"(Esto esta fuera del MVP)
-
+Plataforma de cursos donde haya mejor enseñanza con ayuda de la IA en preguntas y respuestas, así como en evaluaciones del conocimiento adquirido.
 ## Historias de usuario
 
 1. Inicio de sesion(log out)
