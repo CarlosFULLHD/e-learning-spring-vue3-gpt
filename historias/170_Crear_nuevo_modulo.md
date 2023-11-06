@@ -39,9 +39,6 @@ Request:
 POST http://localhost:8080/api/v1/subjects/{id}/modules/
 Accept: Application/json
 Authorization: Bearer JWT
-```
-Response: Exitoso statusCode: 200
-```
 
 {
     "id_subject": 1,
@@ -49,10 +46,31 @@ Response: Exitoso statusCode: 200
 }
 
 ```
+Response: Exitoso statusCode: 200
+```
+[
+{
+    "code" : "CODE-1000",
+    "result" : null,
+    "message" : "El modulo ha sido creado con éxito"
+}
+
+]
+
+
+
+```
 
 Response: No encontrado statusCode: 404
 ```
+[
+{
+    "code" : "ERROR 404",
+    "result" : null,
+    "message" : "El modulo no ha sido crrado"
+}
 
+]
 ```
 
 
