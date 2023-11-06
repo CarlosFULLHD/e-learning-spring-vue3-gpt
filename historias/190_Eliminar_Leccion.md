@@ -11,24 +11,24 @@
 
 ## Analisis
 
-### Pantalla del creacion de modulo
+### Pantalla de la leccion
 
-A continuación se presenta la pantalla de curso, cuyo funcionamiento es.
+A continuación se presenta la pantalla de la leccion, cuyo funcionamiento es.
 
-1. El administrador ingreso a la pagina de un curso.
-2. El administrador observa los modulos y lecciones que puede eliminar o editar.
+1. El administrador ingreso a una leccion.
+2. Presiona el boton para eliminar la lección...
 
 ![Alt text](image-(6).png)
 
 ## Criterios de aceptacion
 
-### Mostrar formulario de creacion del modulo
+### Mostrar .ensaje de eliminacion de lección
 
-- Dado: Que el administrador desea eliminar un nuevo modulo.
+- Dado: Que el administrador desea eliminar una lección.
 - Cuando: Presione el boton para eliminar.
 - Entonces: Se muestra una ventana de confirmacion para eliminar la leccion.
 
-## Disenio
+## Diseño
 
 ### Mostrar formulario de eliminacion de una leccion
 
@@ -42,12 +42,26 @@ Authorization: Bearer JWT
 ```
 Response: Exitoso statusCode: 200
 ```
+[
+{
+    "code" : "CODE-1000",
+    "result" : null,
+    "message" : "La leccion ha sido creada con éxito"
+}
 
+]
 ```
 
 Response: No encontrado statusCode: 404
 ```
+[
+{
+    "code" : "ERROR 404",
+    "result" : null,
+    "message" : "La leccion no ha sido encontrada"
+}
 
+]
 ```
 
 
