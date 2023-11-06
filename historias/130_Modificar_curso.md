@@ -19,7 +19,7 @@ A continuación se presenta la pantalla de modificacion, cuyo funcionamiento es.
 2. El administrador observa los campos para la modificacion del curso.
 
 
-![Alt text](image-4.png)
+![Alt text](image-(4).png)
 
 ## Criterios de aceptacion
 
