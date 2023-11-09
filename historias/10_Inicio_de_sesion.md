@@ -1,5 +1,5 @@
 # Historia
 
 - Yo como: Usuario de la plataforma
-- Quieri: Poder ingresar de forma segura.
-. Para: Comprar o vender tarjetas.
+- Quiero: quiero poder iniciar sesión
+- Para: acceder a mis cursos personalizados y recursos.

@@ -1,12 +1,12 @@
 # Historia: Crear nuevo curso
 
-- Yo como: Administrador.
+- Yo como: instructor.
 - Quiero: Realizar la creacion de un nuevo curso.
 - Para: Agregarlo a los cursos disponibles.
 
 ## Especificación de requerimientos.
 
-1. Mostrar los campos de creacion de curso. 
+1. Mostrar los campos de creacion de curso.
 
 ## Analisis
 
@@ -14,11 +14,10 @@
 
 A continuación se presenta la pantalla de bienvenida al curso, cuyo funcionamiento es.
 
-1. El administrador ingreso a la pagina de creacion de cursos.
-2. El administrador observa los campos para la creacion del curso.
+1. El instructor ingreso a la pagina de creacion de cursos.
+2. El instructor observa los campos para la creacion del curso.
 
-
-![Alt text](image-(4).png)
+![Alt text](<image-(4).png>)
 
 ## Criterios de aceptacion
 
@@ -35,6 +34,7 @@ A continuación se presenta la pantalla de bienvenida al curso, cuyo funcionamie
 1. Para realizar la creacion del curso:
 
 Request:
+
 ```
 POST http://localhost:8080/api/v1/subjects
 Accept: Application/json
@@ -42,6 +42,7 @@ Authorization: Bearer JWT
 ```
 
 Response: Exitoso statusCode: 200
+
 ```
 {
     "id_subject": 1,
@@ -52,11 +53,7 @@ Response: Exitoso statusCode: 200
 ```
 
 Response: No encontrado statusCode: 404
-```
 
 ```
 
-
-
-
-
+```

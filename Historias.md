@@ -2,17 +2,18 @@
 
 ## Valor
 
-Plataforma de cursos donde haya mejor enseñanza con ayuda de la IA en preguntas y respuestas, así como en evaluaciones del conocimiento adquirido.
+Crear una plataforma de e-learning intuitiva y dinámica que no solo facilite el acceso a una variedad de recursos educativos, sino que también utilice la inteligencia artificial para personalizar la experiencia de aprendizaje y evaluar de manera interactiva el conocimiento adquirido por los estudiantes.
+
 ## Historias de usuario
 
-1. Inicio de sesion(log out)
+1. Inicio de sesion(Autenticación y Navegación)
 2. Nav bar con inicio, cursos y recursos
 3. Dar respuesta con CHAT GPT sobre la importancia de habilidades blandas
 4. Listar cursos
 5. Mostrar bienvenida de curso y roadmap
 6. Mostrar modulos y lecciones del curso
 7. Mostrar de la leccion el video y descripcion
-8. Dar respuesta a las preguntas del usuario con chat GPT
+8. Asistencia de Chat GPT en preguntas y respuestas para las lecciones
 9. Realizar prueba generada por el CHAT GPT segun la leccion
 10. Mostrar recursos base para la creacion de los cursos: libros, articulos, canal de yt
 11. Crear nuevo curso
@@ -25,8 +26,6 @@ Plataforma de cursos donde haya mejor enseñanza con ayuda de la IA en preguntas
 18. Modificar leccion
 19. Eliminar leccion
 20. Crear leccion
-21. Añadir chat gpt con descripcion necesaria para responder y crear prueba(BDD)
+21. Añadir chat gpt con descripcion necesaria para responder y crear prueba
 
 ## Whish List
-
-1. Verificar el tipo de carta con Machine Learning.

@@ -1,7 +1,7 @@
 # Historia: Barra de navegacion.
 
 - Yo como: Usuario
-- Quiero: Poder hacer click en la barra de navegacion y etiquetas.
+- Quiero: una barra de navegación que me permita ir fácilmente a las páginas de inicio, cursos y recursos.
 - Para: Cambiar de pestaña.
 
 ## Pendientes de definición.
