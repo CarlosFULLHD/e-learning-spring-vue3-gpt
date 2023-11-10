@@ -67,11 +67,35 @@ Generados por la comunidad de instructores
 
 # Ingresos y Membresías
 
-Membresía Básica: €1/mes (sin Chat GPT).
-Membresía Premium: €5/mes (con Chat GPT).
+- Membresía Básica: €1/mes (sin Chat GPT).
+- Membresía Premium: €5/mes (con Chat GPT).
+- Membresía Avanzada: €10/mes (con Chat GPT, acceso a recursos de bibliografía, cursos premium).
+- Membresía VIP: €20/mes (con Chat GPT, acceso a recursos de bibliografía organizada, cursos premium, y acceso a comunidad privada).
+
+# Sugerencias
+
+Sugerencias para la Comunidad Privada
+Utilizar plataformas como Discord o Slack para crear una comunidad exclusiva.
+Realizar sesiones semanales de Q&A a través de Zoom o Google Meet.
+Ofertas y Promociones Especiales
+Códigos de descuento exclusivos en los videos de YouTube.
+Promociones por tiempo limitado, como acceso gratuito a un curso premium por la suscripción anual.
+Programa de referidos donde los usuarios existentes obtengan descuentos o beneficios al traer nuevos usuarios
 
 ## Whish List
 
 - Integracion con converkit para registro de correos para cada curso o maestro a su lista de correos
 - Integracion con Google analytics para analisis de pagina web
 - Botones de “reportar un error” para costos menores en soporte
+- Diseño de la Base de Datos para KPIs
+  Para medir los KPIs, considera tablas para:
+
+Usuarios: Registro de usuarios, sus suscripciones y actividad.
+Cursos: Información detallada de cada curso, incluyendo inscripciones y finalizaciones.
+Interacciones con Chat GPT: Registro de cada interacción con Chat GPT, incluyendo número de tokens utilizados.
+Pruebas y Evaluaciones: Resultados de las pruebas generadas por Chat GPT.
+Analytics: Datos de tráfico web, tiempo de permanencia, páginas más visitadas, etc.
+
+Uso de Google Analytics y Herramientas de Seguimiento
+Google Analytics: Útil para rastrear el comportamiento del usuario, fuentes de tráfico, y la eficacia del SEO. Configura objetivos y conversiones para medir el rendimiento.
+Leads y SEO: Utiliza Google Analytics para identificar las páginas más efectivas y las fuentes de tráfico para optimizar estrategias de captación de leads y mejorar el SEO.
