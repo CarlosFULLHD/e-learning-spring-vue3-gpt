@@ -107,3 +107,46 @@ CREATE TABLE Feedback (
     CONSTRAINT Feedback_Lessons_fk FOREIGN KEY (id_lesson) REFERENCES Lessons (id_lesson),
     CONSTRAINT Feedback_Users_fk FOREIGN KEY (id_user) REFERENCES Users (id_user)
 );
+
+
+-- UserActivity Table
+CREATE TABLE UserActivity (
+    id_activity serial NOT NULL,
+    id_user int NOT NULL,
+    activity_type varchar(250) NOT NULL,
+    activity_timestamp timestamp NOT NULL,
+    CONSTRAINT UserActivity_pk PRIMARY KEY (id_activity),
+    CONSTRAINT UserActivity_Users_fk FOREIGN KEY (id_user) REFERENCES Users (id_user)
+);
+
+-- CourseRatings Table
+CREATE TABLE CourseRatings (
+    id_rating serial NOT NULL,
+    id_subject int NOT NULL,
+    id_user int NOT NULL,
+    rating int NOT NULL,
+    review_text text,
+    review_date timestamp NOT NULL,
+    CONSTRAINT CourseRatings_pk PRIMARY KEY (id_rating),
+    CONSTRAINT CourseRatings_Subjects_fk FOREIGN KEY (id_subject) REFERENCES Subjects (id_subject),
+    CONSTRAINT CourseRatings_Users_fk FOREIGN KEY (id_user) REFERENCES Users (id_user)
+);
+
+-- UserEngagement Table
+CREATE TABLE UserEngagement (
+    id_engagement serial NOT NULL,
+    id_user int NOT NULL,
+    session_start timestamp NOT NULL,
+    session_end timestamp NOT NULL,
+    CONSTRAINT UserEngagement_pk PRIMARY KEY (id_engagement),
+    CONSTRAINT UserEngagement_Users_fk FOREIGN KEY (id_user) REFERENCES Users (id_user)
+);
+
+-- PageViews Table
+CREATE TABLE PageViews (
+    id_view serial NOT NULL,
+    id_user int,
+    page_url varchar(250) NOT NULL,
+    view_timestamp timestamp NOT NULL,
+    CONSTRAINT PageViews_pk PRIMARY KEY (id_view)
+);

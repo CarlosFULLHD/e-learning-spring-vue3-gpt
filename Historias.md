@@ -84,6 +84,8 @@ Programa de referidos donde los usuarios existentes obtengan descuentos o benefi
 
 ## Whish List
 
+- roadmap personalizado -> bdd para hacer crecer el roadmap de cada curso
+- Comentarios para el curso y de la comunidad(Se usara disqus o alguna api asi?)
 - Integracion con converkit para registro de correos para cada curso o maestro a su lista de correos
 - Integracion con Google analytics para analisis de pagina web
 - Botones de “reportar un error” para costos menores en soporte
