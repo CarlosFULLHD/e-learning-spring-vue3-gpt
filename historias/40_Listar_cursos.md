@@ -6,13 +6,14 @@
 
 ## Pendientes de definición.
 
-1. Ninguno
+1. si la aplicacion es un exito, entonces podriamos añadir un buscador de cursos
 
 ## Especificación de requerimientos.
 
 1. La cantidad maxima de cursos por linea seran 3.
 2. Al momento de obtener la imagen, El tamaño maximo de una imagen para pc sera 600x400, aspect ratio de 16:9. Archivos JPG.
 3. Al momento de obtener la imagen, El tamaño maximo de una imagen para celular sera 300x200, aspect ratio de 16:9. Archivos JPG.
+4. listar cursos por pagina, paginar 6 cursos por pagina
 
 ## Analisis
 
