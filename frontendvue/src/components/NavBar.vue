@@ -6,9 +6,9 @@
           <img
             src="@/assets/e-learning-icon.png"
             alt="E-Learning"
-            class="h-6 w-6 inline-block mr-2"
+            class="h-6 w-6 inline-block mr-2 text-zinc-50"
           />
-          <span class="font-bold text-xl">E-Learning</span>
+          <span class="font-bold text-xl text-zinc-50">E-Learning</span>
         </div>
         <div class="flex items-center">
           <!-- Buscador y Navbar -->
