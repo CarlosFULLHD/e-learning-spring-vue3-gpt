@@ -48,14 +48,14 @@ Algun servicio esta corriendo en el puerto 8080, asi que mata ese servicio o usa
 
 1. Hacer correr una instancia Postgres en docker:
 
-Este codigo nombra el contenedor: "todolistdb", con contraseña: "123456"
+Este codigo nombra el contenedor: "elearning", con contraseña: "123456"
 
 Para conectarse desde nuestro puerto: "5432" hacia el puerto "5432"(NO CAMBIAR ESTE, viene por defecto para conectarse a postgres correctamente)
 
 Descargando como imagen postgres de la version "16"(ultima version octubre-2023)
 
 ```
-docker run --name todolistdb -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres:16
+docker run --name elearning -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres:16
 ```
 
 2. Me conecto a la DB database mediante DataGrip
@@ -72,7 +72,7 @@ Database: postgres
 ```
 
 Se hace "Test Connection con esas credenciales y se conecta con Datagrip"
-
+![img.png](img.png)
 3. Ejecutan el script "init.sql" de la carpeta "database".
 
 PD: Es importante tener las tablas, caso contrario no funcionara el proyecto correctamente
@@ -105,7 +105,7 @@ spring.jpa.hibernate.ddl-auto=none
 Nota: Una vez hecho el paso 1, para volver a correr el contenedor de docker(que tiene la base de datos)
 
 ```
-docker start todolistdb
+docker start elearning
 ```
 
 ---
