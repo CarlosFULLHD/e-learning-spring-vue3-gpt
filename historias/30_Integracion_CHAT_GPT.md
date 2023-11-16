@@ -27,6 +27,14 @@ La plataforma enviará mensajes que contienen las preguntas o solicitudes de los
 La API procesará estas entradas y devolverá respuestas que la plataforma mostrará a los estudiantes.
 
 ![Alt text](<image().png>)
+Imagenes de Platzi:
+![Alt text](image-14.png)
+![Alt text](image-15.png)
+![Alt text](image-16.png)
+![Alt text](image-17.png)
+![Alt text](image-18.png)
+![Alt text](image-19.png)
+![Alt text](image-20.png)
 
 ## Criterios de aceptacion
 

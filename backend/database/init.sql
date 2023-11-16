@@ -7,6 +7,21 @@ CREATE TABLE Users (
     CONSTRAINT Users_pk PRIMARY KEY (id_user)
 );
 
+
+CREATE TABLE Roles (
+    id_role serial NOT NULL,
+    role_name varchar(50) UNIQUE NOT NULL,
+    CONSTRAINT Roles_pk PRIMARY KEY (id_role)
+);
+
+CREATE TABLE UserRoles (
+    id_user int NOT NULL,
+    id_role int NOT NULL,
+    CONSTRAINT UserRoles_pk PRIMARY KEY (id_user, id_role),
+    CONSTRAINT UserRoles_Users_fk FOREIGN KEY (id_user) REFERENCES Users (id_user),
+    CONSTRAINT UserRoles_Roles_fk FOREIGN KEY (id_role) REFERENCES Roles (id_role)
+);
+
 -- Subjects Table
 CREATE TABLE Subjects (
     id_subject serial NOT NULL,
