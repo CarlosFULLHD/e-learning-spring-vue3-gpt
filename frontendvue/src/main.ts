@@ -3,6 +3,7 @@ import App from './App.vue';
 import './assets/main.css'
 import { createAuth0 } from '@auth0/auth0-vue';
 import { createPinia } from 'pinia';
+import router from './router';
 const app = createApp(App);
 app.use(createPinia())
 app.use(
@@ -14,5 +15,5 @@ app.use(
         },
     })
 );
-
+app.use(router)
 app.mount('#app');

@@ -10,7 +10,6 @@
     <!-- Contenido encima de la imagen -->
     <div class="relative z-10">
       <h1 class="text-2xl font-bold mb-4 text-white">¡Bienvenido a E-Learning!</h1>
-      <!-- Aquí puedes añadir más contenido según la necesidad -->
     </div>
   </div>
 </template>

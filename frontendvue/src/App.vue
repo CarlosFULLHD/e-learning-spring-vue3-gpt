@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { useAuth0 } from '@auth0/auth0-vue';
+import { useAuth0 } from '@auth0/auth0-vue'
 import { defineComponent } from 'vue'
 import NavBar from '../../frontendvue/src/components/NavBar.vue'
 import Footer from '../../frontendvue/src/components/Footer.vue'
@@ -19,15 +19,15 @@ export default defineComponent({
     Footer
   },
   setup() {
-    const { loginWithRedirect, user, isAuthenticated } = useAuth0();
+    const { loginWithRedirect, user, isAuthenticated } = useAuth0()
 
     return {
       login: () => {
-        loginWithRedirect();
+        loginWithRedirect()
       },
       user,
       isAuthenticated
-    };
+    }
   }
 })
 </script>
