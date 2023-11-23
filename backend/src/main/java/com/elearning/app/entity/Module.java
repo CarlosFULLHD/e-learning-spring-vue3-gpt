@@ -1,7 +1,13 @@
 package com.elearning.app.entity;
 
-import javakarta.persistence.*;
-
+import jakarta.persistence.*;
+import lombok.*;
+import java.util.Set;
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "Modules")
 public class Module {
@@ -17,35 +23,4 @@ public class Module {
     @Column(name = "module_name")
     private String moduleName;
 
-    public Module() {
-    }
-
-    public Long getIdModule() {
-        return idModule;
-    }
-
-    public void setIdModule(Long idModule) {
-        this.idModule = idModule;
-    }
-
-    public Integer getIdSubject() {
-        return idSubject;
-    }
-
-    public void setIdSubject(Integer idSubject) {
-        this.idSubject = idSubject;
-    }
-
-    public String getModuleName() {
-        return moduleName;
-    }
-
-    public void setModuleName(String moduleName) {
-        this.moduleName = moduleName;
-    }
-
-    @Override
-    public String toString() {
-        return "Module [idModule=" + idModule + ", idSubject=" + idSubject + ", moduleName=" + moduleName + "]";
-    }
 }

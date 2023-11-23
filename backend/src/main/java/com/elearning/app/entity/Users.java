@@ -3,7 +3,7 @@ package com.elearning.app.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.Set;
-
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

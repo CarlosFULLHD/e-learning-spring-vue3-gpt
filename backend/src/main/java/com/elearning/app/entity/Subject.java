@@ -1,7 +1,13 @@
 package com.elearning.app.entity;
+import jakarta.persistence.*;
+import lombok.*;
+import java.util.Set;
 
-import javakarta.persistence.*;
-
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "Subjects")
 public class Subject {
@@ -34,86 +40,4 @@ public class Subject {
     @Column(name = "roadmap_img")
     private String roadmapImg;
 
-    public Subject() {
-    }
-
-    public Long getIdSubject() {
-        return idSubject;
-    }
-
-    public void setIdSubject(Long idSubject) {
-        this.idSubject = idSubject;
-    }
-
-    public String getImgLink() {
-        return imgLink;
-    }
-
-    public void setImgLink(String imgLink) {
-        this.imgLink = imgLink;
-    }
-
-    public String getTitleSubject() {
-        return titleSubject;
-    }
-
-    public void setTitleSubject(String titleSubject) {
-        this.titleSubject = titleSubject;
-    }
-
-    public String getDescriptionSubject() {
-        return descriptionSubject;
-    }
-
-    public void setDescriptionSubject(String descriptionSubject) {
-        this.descriptionSubject = descriptionSubject;
-    }
-
-    public String getWelcomeText() {
-        return welcomeText;
-    }
-
-    public void setWelcomeText(String welcomeText) {
-        this.welcomeText = welcomeText;
-    }
-
-    public String getImportance() {
-        return importance;
-    }
-
-    public void setImportance(String importance) {
-        this.importance = importance;
-    }
-
-    public String getIntendedFor() {
-        return intendedFor;
-    }
-
-    public void setIntendedFor(String intendedFor) {
-        this.intendedFor = intendedFor;
-    }
-
-    public String getLearningsFromThisSubject() {
-        return learningsFromThisSubject;
-    }
-
-    public void setLearningsFromThisSubject(String learningsFromThisSubject) {
-        this.learningsFromThisSubject = learningsFromThisSubject;
-    }
-
-    public String getRoadmapImg() {
-        return roadmapImg;
-    }
-
-    public void setRoadmapImg(String roadmapImg) {
-        this.roadmapImg = roadmapImg;
-    }
-
-    @Override
-    public String toString() {
-        return "Subject [idSubject=" + idSubject + ", imgLink=" + imgLink + ", titleSubject=" + titleSubject
-                + ", descriptionSubject=" + descriptionSubject + ", welcomeText=" + welcomeText + ", importance="
-                + importance + ", intendedFor=" + intendedFor + ", learningsFromThisSubject=" + learningsFromThisSubject
-                + ", roadmapImg=" + roadmapImg + "]";
-    }
 }
