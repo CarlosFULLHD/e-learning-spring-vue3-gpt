@@ -70,8 +70,7 @@ export default {
       // Se usa para mantener el historial de la conversación
       {
         role: 'system',
-        content:
-          'Eres un docente profesional que enseña habilidades blandas, el usuario te hablara sobre que le gustaria aprender a el, le das la  importancia de estas habilidades blandas a lo que el necesita aprender y que pasara si no las aprende, tambien le invitas a leer nuestras membresias de pago abajo de la pagina y le das la bienvenida a "E learning app, tu plataforma de aprendizaje"'
+        content: ''
       }
       // Añadir mensajes de "user" y "assistant" según sea necesario
     ])
@@ -81,42 +80,23 @@ export default {
     })
     const isLoading = ref(false) // Indicador de carga
 
-    // Esta función envía la consulta a la API de OpenAI y recibe la respuesta
     const sendQuery = async () => {
+      if (!userQuery.value.trim()) return
       isLoading.value = true
-
-      // Añade el mensaje del usuario al historial de la conversación
       chatHistory.value.push({ role: 'user', content: userQuery.value })
 
       try {
-        const response = await axios.post(
-          'https://api.openai.com/v1/chat/completions',
-          {
-            messages: chatHistory.value,
-            model: 'gpt-3.5-turbo'
-          },
-          {
-            headers: {
-              Authorization: `Bearer  OPENAI_API_KEY`,
-              'Content-Type': 'application/json'
-            }
-          }
-        )
-
-        // Añade la respuesta del asistente al historial de la conversación
-        const assistantMessage = response.data.choices[0].message.content
-        chatHistory.value.push({ role: 'assistant', content: assistantMessage })
-
-        // Limpia el campo de entrada para la próxima consulta
-        userQuery.value = ''
+        const response = await axios.post('http://localhost:8080/api/chat/message', {
+          message: userQuery.value
+        })
+        chatHistory.value.push({ role: 'assistant', content: response.data })
       } catch (error) {
-        console.error('Error al enviar la consulta:', error)
-        // Manejo de errores, puedes añadir un mensaje de error al historial de la conversación si lo deseas
+        console.error('Error:', error)
+        chatHistory.value.push({ role: 'assistant', content: 'Error al obtener la respuesta.' })
       } finally {
         isLoading.value = false
+        userQuery.value = ''
       }
-      userQuery.value = '' // Limpiar el campo después de enviar la consulta
-      isLoading.value = false // Detener la carga
     }
 
     return {

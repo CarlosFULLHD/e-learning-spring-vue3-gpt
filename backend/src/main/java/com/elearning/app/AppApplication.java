@@ -2,6 +2,7 @@ package com.elearning.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -12,12 +13,16 @@ public class AppApplication {
 		SpringApplication.run(AppApplication.class, args);
 	}
 
-	// configuracion para CORS en puerto 9000
+	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/greeting-javaconfig").allowedOrigins("http://localhost:9000");
+				// Ajusta la URL de mapeo según tus endpoints
+				registry.addMapping("/api/**")
+						.allowedOrigins("http://localhost:9000")
+						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+						.allowedHeaders("*");
 			}
 		};
 	}
