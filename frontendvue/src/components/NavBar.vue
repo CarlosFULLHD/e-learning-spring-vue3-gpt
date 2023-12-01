@@ -1,39 +1,36 @@
 <template>
-  <nav class="bg-gray-400 p-4">
-    <div class="container mx-0 w-max">
+  <nav class="bg-gradient-to-r from-blue-500 to-purple-500 p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
       <div class="flex items-center justify-between space-x-10">
         <div>
           <img
             src="@/assets/e-learning-icon.png"
             alt="E-Learning"
-            class="h-6 w-6 inline-block mr-2 text-zinc-50"
+            class="h-16 w-16 inline-block mr-2 text-zinc-50"
           />
-          <span class="font-bold text-xl text-zinc-50">E-Learning</span>
+          <span class="font-semibold text-xl text-white">E-Learning</span>
         </div>
-        <div class="flex items-center">
+        <div class="flex items-center space-x-4">
           <!-- Buscador y Navbar -->
-          <input type="text" placeholder="Buscar Cursos..." class="border p-2 rounded w-44" />
-          <router-link
-            to="/"
-            class="ml-4 p-2 rounded bg-blue-500 text-white w-32 hover:bg-orange-500 transition-transform duration-300 transform hover:shadow-md"
-          >
+          <input type="text" placeholder="Buscar Cursos..." class="input input-bordered" />
+          <router-link to="/" class="btn btn-ghost hover:bg-blue-700 text-white">
             Inicio
           </router-link>
           <button
-            class="ml-4 p-2 rounded bg-blue-500 text-white w-32 hover:bg-orange-500 transition-transform duration-300 transform hover:shadow-md"
+            class="btn btn-ghost hover:bg-blue-700 text-white"
             href="https://dev-u564vq4dqtozr7z5.us.auth0.com/"
           >
             Cursos
           </button>
           <button
-            class="ml-4 p-2 rounded bg-blue-500 text-white w-32 hover:bg-orange-500 transition-transform duration-300 transform hover:shadow-md"
+            class="btn btn-ghost hover:bg-blue-700 text-white"
             href="https://dev-u564vq4dqtozr7z5.us.auth0.com/"
           >
             Recursos
           </button>
           <div v-if="!isAuthenticated">
             <button
-              class="ml-4 p-2 rounded bg-blue-500 text-white flex items-center hover:bg-orange-500 transition-transform duration-300 transform hover:shadow-md"
+              class="btn btn-ghost text-white hover:bg-orange-500"
               href="https://dev-u564vq4dqtozr7z5.us.auth0.com/"
               @click="login"
             >
@@ -87,11 +84,11 @@
               v-if="user?.picture"
               :src="user?.picture"
               alt="Avatar"
-              class="h-12 w-12 rounded-full"
+              class="h-12 w-12 rounded-full ml-2"
             />
             <div
               v-else
-              class="h-8 w-8 bg-blue-500 text-white rounded-full flex items-center justify-center"
+              class="h-12 w-12 bg-white text-blue-500 rounded-full flex items-center justify-center ml-2"
             >
               <span>{{ user?.given_name?.charAt(0) }}{{ user?.family_name?.charAt(0) }}</span>
             </div>

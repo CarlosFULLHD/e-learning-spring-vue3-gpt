@@ -19,7 +19,7 @@
     "pinia": "^2.1.7",
     "save-dev": "^0.0.1-security",
     "ts-loader": "^9.5.1",
-    "vue": "^3.3.4",
+    "vue": "^3.3.9",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
