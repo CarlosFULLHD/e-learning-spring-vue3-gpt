@@ -13,21 +13,18 @@
         <div class="flex items-center space-x-4">
           <!-- Buscador y Navbar -->
           <input type="text" placeholder="Buscar Cursos..." class="input input-bordered" />
-          <router-link to="/" class="btn btn-ghost hover:bg-blue-700 text-white">
+          <router-link
+            to="/"
+            class="ml-4 p-2 rounded bg-blue-500 text-white w-32 hover:bg-orange-500 transition-transform duration-300 transform hover:shadow-md"
+          >
             Inicio
           </router-link>
-          <button
-            class="btn btn-ghost hover:bg-blue-700 text-white"
-            href="https://dev-u564vq4dqtozr7z5.us.auth0.com/"
-          >
+          <router-link to="/subjects" class="ml-4 p-2 rounded bg-blue-500 text-white w-32 hover:bg-orange-500 transition-transform duration-300 transform hover:shadow-md">
             Cursos
-          </button>
-          <button
-            class="btn btn-ghost hover:bg-blue-700 text-white"
-            href="https://dev-u564vq4dqtozr7z5.us.auth0.com/"
-          >
+          </router-link>
+          <router-link to="/recursos" class="ml-4 p-2 rounded bg-blue-500 text-white w-32 hover:bg-orange-500 transition-transform duration-300 transform hover:shadow-md">
             Recursos
-          </button>
+          </router-link>
           <div v-if="!isAuthenticated">
             <button
               class="btn btn-ghost text-white hover:bg-orange-500"
