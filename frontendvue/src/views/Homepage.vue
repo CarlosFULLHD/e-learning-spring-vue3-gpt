@@ -50,6 +50,7 @@
           </div>
           <div class="mb-4">
             <button @click="sendQuery" class="btn btn-primary rounded-r-lg">Enviar</button>
+            <button @click="Helloworld" class="btn btn-primary rounded-r-lg">Hola mundo</button>
             <div v-if="isLoading" class="loader">Cargando...</div>
           </div>
         </div>
@@ -81,21 +82,41 @@ export default {
     const isLoading = ref(false) // Indicador de carga
 
     const sendQuery = async () => {
-      if (!userQuery.value.trim()) return
+      if (!userQuery.value.trim()) {
+        console.log('La consulta del usuario está vacía.')
+        return
+      }
       isLoading.value = true
       chatHistory.value.push({ role: 'user', content: userQuery.value })
+      console.log('Enviando consulta al backend:', userQuery.value)
 
       try {
-        const response = await axios.post('http://localhost:8080/api/chat/message', {
+        const response = await axios.post('http://localhost:8080/api/chatgpt', {
           message: userQuery.value
         })
+        console.log('Respuesta recibida del backend:', response.data)
         chatHistory.value.push({ role: 'assistant', content: response.data })
       } catch (error) {
-        console.error('Error:', error)
+        console.error('Error al comunicarse con el backend:', error)
         chatHistory.value.push({ role: 'assistant', content: 'Error al obtener la respuesta.' })
       } finally {
         isLoading.value = false
         userQuery.value = ''
+      }
+    }
+
+    const Helloworld = async () => {
+      console.log('Enviando consulta al backend para prueba de Hola Mundo')
+
+      try {
+        const response = await axios.get('http://localhost:8080/api/v1')
+        console.log('Respuesta recibida del backend:', response.data)
+        chatHistory.value.push({ role: 'assistant', content: response.data })
+      } catch (error) {
+        console.error('Error al comunicarse con el backend:', error)
+        chatHistory.value.push({ role: 'assistant', content: 'Error al obtener la respuesta.' })
+      } finally {
+        isLoading.value = false
       }
     }
 
@@ -104,7 +125,8 @@ export default {
       chatHistory,
       sendQuery,
       isLoading,
-      filteredChatHistory
+      filteredChatHistory,
+      Helloworld
     }
   }
 }

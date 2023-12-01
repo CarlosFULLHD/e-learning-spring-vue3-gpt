@@ -12,6 +12,7 @@ app.use(
         clientId: 'TBanqzi5VrjC5YEluhQCEr5wzBn9dE8L',
         authorizationParams: {
             redirect_uri: window.location.origin,
+            audience: "https://elearningapp/roles",
         },
     })
 );

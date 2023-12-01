@@ -3,7 +3,7 @@ server:
 openai:
   api:
     url: https://api.openai.com/v1/chat/completions
-    key: KEYOPENAI
+    key:
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres?useSSL=false
@@ -16,17 +16,3 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-  security:
-    oauth2:
-      client:
-        registration:
-          auth0:
-            client-id: UvbnyKUi7sNzQJAscqx59UHvbnmnuWPn
-            client-secret: UshXmhc04xzrVvfEcoYp3LgnltdW7zBxDf0wjGb85tMM0Px5X8IZZdAMjLmiwpVK
-            scope:
-              - openid
-              - profile
-              - email
-        provider:
-          auth0:
-            issuer-uri: https://dev-u564vq4dqtozr7z5.us.auth0.com/

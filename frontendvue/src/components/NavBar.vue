@@ -80,12 +80,12 @@
           <!-- Nickname, Email y Avatar -->
           <div class="flex items-center" v-if="isAuthenticated">
             <div class="ml-2 p-1 flex flex-col text-white text-xs">
-              <code class="text-white text-right">{{ user.nickname }}</code>
-              <code class="text-white">{{ user.email }}</code>
+              <code class="text-white text-right">{{ user?.nickname }}</code>
+              <code class="text-white">{{ user?.email }}</code>
             </div>
             <img
-              v-if="user.picture"
-              :src="user.picture"
+              v-if="user?.picture"
+              :src="user?.picture"
               alt="Avatar"
               class="h-12 w-12 rounded-full"
             />
@@ -93,7 +93,7 @@
               v-else
               class="h-8 w-8 bg-blue-500 text-white rounded-full flex items-center justify-center"
             >
-              <span>{{ user.given_name.charAt(0) }}{{ user.family_name.charAt(0) }}</span>
+              <span>{{ user?.given_name?.charAt(0) }}{{ user?.family_name?.charAt(0) }}</span>
             </div>
           </div>
         </div>
