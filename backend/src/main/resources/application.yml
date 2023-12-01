@@ -1,9 +1,9 @@
 server:
   port: 8080
-openai:
-  api:
-    url: https://api.openai.com/v1/chat/completions
-    key:
+#openai:
+#  api:
+#    url: https://api.openai.com/v1/chat/completions
+#    key: OPEN_AI_KEY
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres?useSSL=false

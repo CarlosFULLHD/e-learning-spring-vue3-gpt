@@ -29,7 +29,7 @@
                 <!-- esto usarlo arriba -->
                 <!--                  -->
                 <span
-                  class="inline-block p-2 rounded-lg"
+                  class="inline-block p-2 rounded-lg text-gray-950"
                   :class="message.role === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-200'"
                 >
                   {{ message.content }}
@@ -50,7 +50,6 @@
           </div>
           <div class="mb-4">
             <button @click="sendQuery" class="btn btn-primary rounded-r-lg">Enviar</button>
-            <button @click="Helloworld" class="btn btn-primary rounded-r-lg">Hola mundo</button>
             <div v-if="isLoading" class="loader">Cargando...</div>
           </div>
         </div>
@@ -71,7 +70,8 @@ export default {
       // Se usa para mantener el historial de la conversación
       {
         role: 'system',
-        content: ''
+        content:
+          'Eres un docente profesional que enseña habilidades blandas, el usuario te hablara sobre que le gustaria aprender a el, le das la  importancia de estas habilidades blandas a lo que el necesita aprender y que pasara si no las aprende, tambien le invitas a leer nuestras membresias de pago abajo de la pagina y le das la bienvenida a "E learning app, tu plataforma de aprendizaje"'
       }
       // Añadir mensajes de "user" y "assistant" según sea necesario
     ])
@@ -81,43 +81,42 @@ export default {
     })
     const isLoading = ref(false) // Indicador de carga
 
+    // Esta función envía la consulta a la API de OpenAI y recibe la respuesta
     const sendQuery = async () => {
-      if (!userQuery.value.trim()) {
-        console.log('La consulta del usuario está vacía.')
-        return
-      }
       isLoading.value = true
+
+      // Añade el mensaje del usuario al historial de la conversación
       chatHistory.value.push({ role: 'user', content: userQuery.value })
-      console.log('Enviando consulta al backend:', userQuery.value)
 
       try {
-        const response = await axios.post('http://localhost:8080/api/chatgpt', {
-          message: userQuery.value
-        })
-        console.log('Respuesta recibida del backend:', response.data)
-        chatHistory.value.push({ role: 'assistant', content: response.data })
-      } catch (error) {
-        console.error('Error al comunicarse con el backend:', error)
-        chatHistory.value.push({ role: 'assistant', content: 'Error al obtener la respuesta.' })
-      } finally {
-        isLoading.value = false
+        const response = await axios.post(
+          'https://api.openai.com/v1/chat/completions',
+          {
+            messages: chatHistory.value,
+            model: 'gpt-3.5-turbo'
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+              'Content-Type': 'application/json'
+            }
+          }
+        )
+
+        // Añade la respuesta del asistente al historial de la conversación
+        const assistantMessage = response.data.choices[0].message.content
+        chatHistory.value.push({ role: 'assistant', content: assistantMessage })
+
+        // Limpia el campo de entrada para la próxima consulta
         userQuery.value = ''
-      }
-    }
-
-    const Helloworld = async () => {
-      console.log('Enviando consulta al backend para prueba de Hola Mundo')
-
-      try {
-        const response = await axios.get('http://localhost:8080/api/v1')
-        console.log('Respuesta recibida del backend:', response.data)
-        chatHistory.value.push({ role: 'assistant', content: response.data })
       } catch (error) {
-        console.error('Error al comunicarse con el backend:', error)
-        chatHistory.value.push({ role: 'assistant', content: 'Error al obtener la respuesta.' })
+        console.error('Error al enviar la consulta:', error)
+        // Manejo de errores, puedes añadir un mensaje de error al historial de la conversación si lo deseas
       } finally {
         isLoading.value = false
       }
+      userQuery.value = '' // Limpiar el campo después de enviar la consulta
+      isLoading.value = false // Detener la carga
     }
 
     return {
@@ -125,8 +124,7 @@ export default {
       chatHistory,
       sendQuery,
       isLoading,
-      filteredChatHistory,
-      Helloworld
+      filteredChatHistory
     }
   }
 }
